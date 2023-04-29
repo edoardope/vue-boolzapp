@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="asset/style.css">
     <title>Document</title>
 </head>
@@ -12,10 +13,106 @@
         <!-- full interface -->
         <section id="interface-background">
             <div id="interface">
+                <!-- left-side-profile -->
                 <div id="profile-list">
+                    <!-- profile info -->
+                    <div id="profile-info">
+                        <div id="profile-info-logo">
+                            <img class="img-cont" src="asset/img/avatar_io.jpg" alt="my avatar">
+                            <span class="name">margherita</span>
+                        </div>
+                        <div id="profile-info-icon">
+                            <i class="fa-solid fa-circle icon"></i>
+                            <i class="fa-solid fa-message icon"></i>
+                            <i class="fa-solid fa-ellipsis-vertical icon"></i>
+                        </div>
+                    </div>
+                    <!-- profile notification -->
+                    <div id="profile-notification">
+                        <span class="notification-icon-cont flex-central">
+                            <i class="fa-solid fa-bell-slash n-icon"></i>
+                        </span>
+                        <span class="notification-txt-cont">
+                            <span class="name">Ricevi nontifiche di nuovi messaggi</span>
+                            <a href="#">Attiva notifiche dekstop</a>
+                        </span>
+                    </div>
+                    <!-- profile search -->
+                    <div class="flex-central" id="profile-search">
+                        <span class="search-btn flex-central"><i class="fa-solid fa-message icon"></i></span>
+                        <input class="search-bar" type="text" placeholder="cerca o inizia una chat">
+                    </div>
+                    <!-- profile friend -->
+                    <div id="profile-friend">
+                        <div class="profile-box">
+                            <div class="flex-al">
+                                <img class="img-cont" src="asset/img/avatar_io.jpg" alt="my avatar">
+                                <div>
+                                    <span class="name">margherita</span>
+                                    <span class="last-msg">ultimo messaggio inviato</span>
+                                </div>
+                            </div>
+                            <span class="last-lg-time">12:00</span>
+                        </div>
+                        <div class="profile-box">
+                            <div class="flex-al">
+                                <img class="img-cont" src="asset/img/avatar_io.jpg" alt="my avatar">
+                                <div>
+                                    <span class="name">margherita</span>
+                                    <span class="last-msg">ultimo messaggio inviato</span>
+                                </div>
+                            </div>
+                            <span class="last-lg-time">12:00</span>
+                        </div>
+                        <div class="profile-box">
+                            <div class="flex-al">
+                                <img class="img-cont" src="asset/img/avatar_io.jpg" alt="my avatar">
+                                <div>
+                                    <span class="name">margherita</span>
+                                    <span class="last-msg">ultimo messaggio inviato</span>
+                                </div>
+                            </div>
+                            <span class="last-lg-time">12:00</span>
+                        </div>
+
+                    </div>
 
                 </div>
+                <!-- right-side-chat -->
                 <div id="chat-window">
+                    <!-- chat info -->
+                    <div id="chat-info">
+                        <div id="profile-info-logo">
+                            <img class="img-cont" src="asset/img/avatar_io.jpg" alt="my avatar">
+                            <span class="name">margherita</span>
+                        </div>
+                        <div id="profile-info-icon">
+                            <i class="fa-solid fa-circle icon"></i>
+                            <i class="fa-solid fa-message icon"></i>
+                            <i class="fa-solid fa-ellipsis-vertical icon"></i>
+                        </div>
+                    </div>
+                    <!-- chat screen -->
+                    <div id="chat-screen">
+                        <div class="sended-msg">
+                            <span class="sended-msg-txt">ciao</span>
+                            <span class="sended-msg-time">13:00</span>
+                        </div>
+                        <div class="sended-msg">
+                            <span class="sended-msg-txt">ciao come stai</span>
+                            <span class="sended-msg-time">13:01</span>
+                        </div>
+                        <div class="recived-msg">
+                            <span class="recived-msg-txt">ciao</span>
+                            <span class="recived-msg-time">13:00</span>
+                        </div>
+                    </div>
+                    <!-- chat input -->
+                    <div id="chat-input">
+                        <div class="flex-central icon-cont"><i class="fa-solid fa-message icon"></i></div>
+                        <div class="flex-central chat-input-txt-box"><input class="chat-input-txt" type="text" placeholder="inizia una chat"></div>
+                        <div class="flex-central icon-cont"><i class="fa-solid fa-message icon"></i></div>
+                    </div>
 
                 </div>
 
