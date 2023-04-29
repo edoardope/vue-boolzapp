@@ -178,7 +178,7 @@ a{
 
 .last-msg{
     display: block;
-    color: lightgrey;
+    color: grey;
     margin-left: 10px;
     font-size: 10px;
 }
@@ -190,7 +190,7 @@ a{
     align-items: flex-start;
     height: 100%;
     padding-top: 10px;
-    color: lightgrey;
+    color: grey;
 }
 
 .icon-cont{
@@ -208,20 +208,20 @@ a{
     border-radius: 5px;
 }
 
-.sended-msg{
+.sent{
     display: flex;
     justify-content: end;
     margin-top: 20px;
     padding-right: 50px;
 }
 
-.sended-msg-txt{
+.sent-txt{
     background-color: green;
     padding: 10px;
     border-radius: 10px 0px 0px 10px;
 }
 
-.sended-msg-time{
+.sent-time{
     background-color: green;
     color: lightgrey;
     font-size: 10px;
@@ -233,22 +233,22 @@ a{
     padding-bottom: 5px;
 }
 
-.recived-msg{
+.received{
     display: flex;
     justify-content: start;
     margin-top: 20px;
     padding-left: 50px;
 }
 
-.recived-msg-txt{
+.received-txt{
     background-color: white;
     padding: 10px;
     border-radius: 10px 0px 0px 10px;
 }
 
-.recived-msg-time{
+.received-time{
     background-color: white;
-    color: lightgrey;
+    color: grey;
     font-size: 10px;
     border-radius: 0px 10px 10px 0px;
     padding-left: 58px;

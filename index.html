@@ -44,32 +44,12 @@
                     </div>
                     <!-- profile friend -->
                     <div id="profile-friend">
-                        <div class="profile-box">
+                        <div class="profile-box" v-for="(element, index) in contacts" :key ="index" @click="selectchat(index)">
                             <div class="flex-al">
-                                <img class="img-cont" src="asset/img/avatar_io.jpg" alt="my avatar">
+                                <img class="img-cont" :src="element.avatar" alt="my avatar">
                                 <div>
-                                    <span class="name">margherita</span>
-                                    <span class="last-msg">ultimo messaggio inviato</span>
-                                </div>
-                            </div>
-                            <span class="last-lg-time">12:00</span>
-                        </div>
-                        <div class="profile-box">
-                            <div class="flex-al">
-                                <img class="img-cont" src="asset/img/avatar_io.jpg" alt="my avatar">
-                                <div>
-                                    <span class="name">margherita</span>
-                                    <span class="last-msg">ultimo messaggio inviato</span>
-                                </div>
-                            </div>
-                            <span class="last-lg-time">12:00</span>
-                        </div>
-                        <div class="profile-box">
-                            <div class="flex-al">
-                                <img class="img-cont" src="asset/img/avatar_io.jpg" alt="my avatar">
-                                <div>
-                                    <span class="name">margherita</span>
-                                    <span class="last-msg">ultimo messaggio inviato</span>
+                                    <span class="name">{{element.name}}</span>
+                                    <span class="last-msg">{{ element.messages[element.messages.length - 1].message }}</span>
                                 </div>
                             </div>
                             <span class="last-lg-time">12:00</span>
@@ -83,8 +63,8 @@
                     <!-- chat info -->
                     <div id="chat-info">
                         <div id="profile-info-logo">
-                            <img class="img-cont" src="asset/img/avatar_io.jpg" alt="my avatar">
-                            <span class="name">margherita</span>
+                            <img class="img-cont" :src="contacts[selectedchat].avatar" alt="my avatar">
+                            <span class="name">{{contacts[selectedchat].name}}</span>
                         </div>
                         <div id="profile-info-icon">
                             <i class="fa-solid fa-circle icon"></i>
@@ -94,17 +74,11 @@
                     </div>
                     <!-- chat screen -->
                     <div id="chat-screen">
-                        <div class="sended-msg">
-                            <span class="sended-msg-txt">ciao</span>
-                            <span class="sended-msg-time">13:00</span>
-                        </div>
-                        <div class="sended-msg">
-                            <span class="sended-msg-txt">ciao come stai</span>
-                            <span class="sended-msg-time">13:01</span>
-                        </div>
-                        <div class="recived-msg">
-                            <span class="recived-msg-txt">ciao</span>
-                            <span class="recived-msg-time">13:00</span>
+                        <div v-for="(element, index) in contacts[selectedchat].messages" :key ="index">
+                            <div :class="element.status">
+                                <span :class="element.status2">{{element.message}}</span>
+                                <span :class="element.status3">{{element.date.split(' ')[1].split(':').slice(0, 2).join(':')}}</span>
+                            </div>
                         </div>
                     </div>
                     <!-- chat input -->
