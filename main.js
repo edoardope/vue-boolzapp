@@ -210,14 +210,58 @@ createApp({
         }
     ],
 
+    chatinput: "",
+
     selectedchat: 0,
 
+    namefilter: "",
+
+    filteredcontacts: [],
+
     }
+  },
+  mounted(){
+   
   },
   methods: {
     selectchat(index){
       this.selectedchat = index
-    }
+    },
+    postchatinput(){
+      let now = new Date();
+      let year = now.getFullYear();
+      let month = ('0' + (now.getMonth() + 1)).slice(-2);
+      let day = ('0' + now.getDate()).slice(-2);
+      let hours = ('0' + now.getHours()).slice(-2);
+      let minutes = ('0' + now.getMinutes()).slice(-2);
+      let seconds = ('0' + now.getSeconds()).slice(-2);
+      let timestamp = year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;      
+      this.contacts[this.selectedchat].messages.push({
+        date: timestamp,
+        message: this.chatinput,
+        status: 'sent',
+        status2: 'sent-txt',
+        status3: 'sent-time',
+      });
+      setTimeout(this.risposta, 3000);
+    },
+    risposta(){
+      let now = new Date();
+      let year = now.getFullYear();
+      let month = ('0' + (now.getMonth() + 1)).slice(-2);
+      let day = ('0' + now.getDate()).slice(-2);
+      let hours = ('0' + now.getHours()).slice(-2);
+      let minutes = ('0' + now.getMinutes()).slice(-2);
+      let seconds = ('0' + now.getSeconds()).slice(-2);
+      let timestamp = year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;
+      this.contacts[this.selectedchat].messages.push({
+        date: timestamp,
+        message: "ok",
+        status: 'received',
+        status2: 'received-txt',
+        status3: 'received-time',
+      });
+    },
   }
 
 }).mount('#app')

@@ -19,7 +19,7 @@ a{
 
 #interface{
     height: 90vh;
-    width: 1000px;
+    width: 80%;
     display: flex;
 }
 
@@ -45,6 +45,8 @@ a{
 #chat-screen{
     height: 80%;
     background-image: url(img/mine.jpg);
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 #chat-input{
@@ -256,4 +258,12 @@ a{
     align-items: end;
     padding-right: 5px;
     padding-bottom: 5px;
+}
+
+.none{
+    display: none;
+}
+
+.active{
+    background-color: lightblue;
 }
