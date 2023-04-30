@@ -214,9 +214,13 @@ createApp({
 
     selectedchat: 0,
 
+    selectedmsg: 0,
+
     namefilter: "",
 
     filteredcontacts: [],
+
+    msgvisstat: "none",
 
     }
   },
@@ -226,6 +230,8 @@ createApp({
   methods: {
     selectchat(index){
       this.selectedchat = index
+
+      this.msgvisstat = "none"
     },
     postchatinput(){
       let now = new Date();
@@ -262,6 +268,24 @@ createApp({
         status3: 'received-time',
       });
     },
+    msgmenuvschange(index, element){
+
+      this.selectedmsg = index
+
+      console.log(this.selectedmsg)
+
+      if (this.msgvisstat == 'visible') {
+        this.msgvisstat = 'none'
+      } else {
+        this.msgvisstat = 'visible'
+      } 
+
+    },
+    deletemsg(){
+      if (this.selectedmsg != 0) {
+        this.contacts[this.selectedchat].messages.splice(this.selectedmsg, 1)
+      }   
+    }
   }
 
 }).mount('#app')

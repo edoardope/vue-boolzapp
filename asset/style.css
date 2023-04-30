@@ -267,3 +267,26 @@ a{
 .active{
     background-color: lightblue;
 }
+
+.msg-menu-btn{
+    position: relative;
+    right: 2%;
+}
+
+.msg-menu-cont{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    padding-right: 50px;
+}
+
+.msg-menu{
+    width: 150px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.visible{
+    display: block!important;
+}

@@ -39,7 +39,7 @@
                     </div>
                     <!-- profile search -->
                     <div class="flex-central" id="profile-search">
-                        <span class="search-btn flex-central" @click="filtering()"><i class="fa-solid fa-message icon"></i></span>
+                        <span class="search-btn flex-central"><i class="fa-solid fa-message icon"></i></span>
                         <input v-model="namefilter" class="search-bar" type="text" placeholder="cerca o inizia una chat">
                     </div>
                     <!-- profile friend -->
@@ -78,6 +78,12 @@
                             <div :class="element.status">
                                 <span :class="element.status2">{{element.message}}</span>
                                 <span :class="element.status3">{{element.date.split(' ')[1].split(':').slice(0, 2).join(':')}}</span>
+                                <span class="msg-menu-btn" @click="msgmenuvschange(index, element)"><i class="fa-light fa-chevron-down"></i></span>
+                            </div>
+                            <div :class="element.status">
+                                <div :class="(index == selectedmsg ? msgvisstat : '')" class="msg-menu none">
+                                    <span @click="deletemsg()">delete message</span>
+                                </div>
                             </div>
                         </div>
                     </div>
